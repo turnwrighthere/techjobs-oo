@@ -23,6 +23,31 @@
                         th:value="${employer.id}"
                         th:text="${employer.value}"></option>
             </select>
+
+            <br></br>
+            <label th:for="locationId">Location</label>
+            <select th:field="*{locationId}">
+                <option th:each="location : *{locations}"
+                        th:value="${location.id}"
+                        th:text="${location.value}"></option>
+            </select>
+
+            <br></br>
+            <label th:for="coreCompetencyId">Skill</label>
+            <select th:field="*{coreCompetencyId}">
+                <option th:each="skill : *{coreCompetencies}"
+                        th:value="${skill.id}"
+                        th:text="${skill.value}"></option>
+            </select>
+
+            <br></br>
+            <label th:for="positionId">Position Type</label>
+            <select th:field="*{positionId}">
+                <option th:each="position : *{positionTypes}"
+                        th:value="${position.id}"
+                        th:text="${position.value}"></option>
+            </select>
+
         </div>
 
         <!-- TODO #5 - Create <select> dropdowns for other job fields -->
